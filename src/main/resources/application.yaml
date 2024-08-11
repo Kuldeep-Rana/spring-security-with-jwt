@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-security-app
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+#  sql:
+#    init:
+#      mode: always
+
+  datasource:
+    url: jdbc:h2:file:/db/msdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8081
